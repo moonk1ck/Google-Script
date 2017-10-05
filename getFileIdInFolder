@@ -1,0 +1,10 @@
+function getFileIdInFolder() {
+  var folder = DriveApp.getFolderById('$+$insert file id$+$');
+  
+  var files = folder.getFiles();
+  while(files.hasNext()){
+    Logger.log(files.next().getId());
+  }
+}
+
+
